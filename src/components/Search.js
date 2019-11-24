@@ -41,6 +41,14 @@ export class Search extends Component {
 
           <input type="submit" value="Submit" />
         </form>
+
+        <div>
+          <ul>
+            <li>{this.props.contact.name}</li>
+            <li>{this.props.contact.phone}</li>
+            <li>{this.props.contact.email}</li>
+          </ul>
+        </div>
       </div>
     );
   }
@@ -48,4 +56,7 @@ export class Search extends Component {
 Search.propTypes = {
   fetchContact: PropTypes.func.isRequired
 };
-export default connect(null, { fetchContact })(Search);
+const mapStateToProps = state => ({
+  contact: state.contacts.item
+});
+export default connect(mapStateToProps, { fetchContact })(Search);

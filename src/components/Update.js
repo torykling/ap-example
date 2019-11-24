@@ -22,11 +22,12 @@ export class Update extends Component {
   onSubmit(e) {
     e.preventDefault();
     const data = {
+      id: this.state.id,
       name: this.state.name,
       email: this.state.email,
       phone: this.state.phone
     };
-    this.props.updatePost(data);
+    this.props.updateContact(data);
   }
   render() {
     return (

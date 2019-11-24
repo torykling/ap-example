@@ -14,11 +14,9 @@ const initialState = {
 export default function contactReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_CONTACTS:
-      console.log("from reducer");
       return { ...state, items: action.payload };
     case FETCH_CONTACT:
-      return { ...state, items: action.payload };
-
+      return { ...state, item: action.payload };
     case POST_CONTACT:
       return { ...state, item: action.payload };
     case DELETE_CONTACT:

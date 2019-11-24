@@ -7,11 +7,6 @@ export class List extends Component {
   componentDidMount() {
     this.props.fetchContacts();
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.newContact) {
-      this.props.contacts.unshift(nextProps.newContact);
-    }
-  }
   render() {
     const contacts = this.props.contacts.map(contact => (
       <div key={contact._id}>
@@ -36,7 +31,6 @@ List.propTypes = {
   contacts: PropTypes.array.isRequired
 };
 const mapStateToProps = state => ({
-  contacts: state.contacts.items,
-  newContact: state.contacts.item
+  contacts: state.contacts.items
 });
 export default connect(mapStateToProps, { fetchContacts })(List);
