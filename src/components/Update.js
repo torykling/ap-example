@@ -7,10 +7,9 @@ export class Update extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "",
-      name: "",
-      email: "",
-      phone: ""
+      name: this.props.contact.name,
+      email: this.props.contact.email,
+      phone: this.props.contact.phone
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -22,7 +21,7 @@ export class Update extends Component {
   onSubmit(e) {
     e.preventDefault();
     const data = {
-      id: this.state.id,
+      id: this.props.contact.id,
       name: this.state.name,
       email: this.state.email,
       phone: this.state.phone
@@ -32,18 +31,8 @@ export class Update extends Component {
   render() {
     return (
       <div>
-        <h1>Update a contact</h1>
+        <h4>Update this contact</h4>
         <form onSubmit={this.onSubmit}>
-          <div>
-            <label>Id:</label>
-            <input
-              onChange={this.onChange}
-              type="text"
-              name="id"
-              value={this.state.id}
-            />
-          </div>
-          <br />
           <div>
             <label>Name:</label>
             <input
@@ -74,7 +63,7 @@ export class Update extends Component {
             />
           </div>
           <br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Update" />
         </form>
       </div>
     );

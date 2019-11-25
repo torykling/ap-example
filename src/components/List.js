@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { fetchContacts } from "../actions/index.js";
 import Delete from "./Delete";
 import Create from "./Create";
+import Update from "./Update";
 
 export class List extends Component {
   componentDidMount() {
@@ -11,14 +12,17 @@ export class List extends Component {
   }
   render() {
     const contacts = this.props.contacts.map(contact => (
-      <div>
+      <div style={contactStyle}>
         <ul key={contact.id}>
           <li>{contact.name}</li>
           <li>{contact.email}</li>
           <li>{contact.phone}</li>
           <li>{contact.id}</li>
         </ul>
-        <Delete id={contact.id} />
+        <div>
+          <Update contact={contact} />
+          <Delete id={contact.id} />
+        </div>
       </div>
     ));
     return (
@@ -38,3 +42,7 @@ const mapStateToProps = state => ({
   contacts: state.contacts.items
 });
 export default connect(mapStateToProps, { fetchContacts })(List);
+
+const contactStyle = {
+  display: "flex"
+};

@@ -25,7 +25,13 @@ export default function contactReducer(state = initialState, action) {
         items: state.items.filter(item => item.id !== action.payload)
       };
     case UPDATE_CONTACT:
-      return { ...state, item: action.payload };
+      return {
+        ...state,
+        items: state.items.map(item => {
+          if (item.id !== action.payload.id) return item;
+          return { ...item, ...action.payload };
+        })
+      };
     default:
       return state;
   }
