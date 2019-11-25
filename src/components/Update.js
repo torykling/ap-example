@@ -30,7 +30,7 @@ export class Update extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="update">
         <h4>Update this contact</h4>
         <form onSubmit={this.onSubmit}>
           <div>

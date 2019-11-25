@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Route } from "react-router-dom";
 import List from "./components/List";
 import "./App.css";
+import Create from "./components/Create";
 
 import Search from "./components/Search";
 
@@ -16,6 +17,7 @@ function App() {
           Search
         </Link>
       </nav>
+      <Create />
       <main>
         <Route path="/" exact render={routerProps => <List />} />
         <Route path="/search" exact render={routerProps => <Search />} />

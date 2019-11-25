@@ -43,9 +43,44 @@ main {
   padding: 5px 10px;
   color: white;
 }
+.greenButton:hover {
+  background-color: rgb(0, 131, 117);
+}
+.greyButton:hover {
+  background-color: rgb(46, 105, 127);
+}
 
 .contactCard {
   border: 1.5px solid rgb(84, 105, 127);
   border-radius: 5px;
   margin: 1px;
+  padding: 2px 10px;
+  width: 20rem;
+  height: 10rem;
+}
+
+.allContacts {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 0.6rem;
+}
+.addForm {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.create {
+  background-color: rgb(62, 131, 117);
+  width: 100%;
+  margin: 0;
+}
+.update input {
+  margin: 0;
 }

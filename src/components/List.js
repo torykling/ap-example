@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchContacts } from "../actions/index.js";
 import Delete from "./Delete";
-import Create from "./Create";
 import Update from "./Update";
 
 export class List extends Component {
@@ -15,10 +14,22 @@ export class List extends Component {
       <div style={contactStyle}>
         <div className="contactCard">
           <ul key={contact.id}>
-            <li>{contact.name}</li>
-            <li>{contact.email}</li>
-            <li>{contact.phone}</li>
-            <li>{contact.id}</li>
+            <li>
+              <b>Name: </b>
+              {contact.name}
+            </li>
+            <li>
+              <b>Email: </b> {contact.email}
+            </li>
+            <li>
+              {" "}
+              <b>Phone: </b>
+              {contact.phone}
+            </li>
+            <li>
+              <b>Id: </b>
+              {contact.id}
+            </li>
           </ul>
         </div>
         <div>
@@ -29,8 +40,7 @@ export class List extends Component {
     ));
     return (
       <div>
-        <Create />
-        <h1>All Contacts</h1>
+        <h1 className="allContacts">All Contacts</h1>
         {contacts}
       </div>
     );
