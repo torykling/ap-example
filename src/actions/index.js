@@ -37,12 +37,12 @@ export const createContact = data => dispatch => {
   );
 };
 // state.item
-export const deleteContact = data => dispatch => {
+export const deleteContact = id => dispatch => {
   console.log("deleting");
-  axios.delete(`http://localhost:3001/contacts/${data.id}`).then(res =>
+  axios.delete(`http://localhost:3001/contacts/${id}`).then(res =>
     dispatch({
       type: DELETE_CONTACT,
-      payload: data
+      payload: id
     })
   );
 };

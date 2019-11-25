@@ -18,9 +18,12 @@ export default function contactReducer(state = initialState, action) {
     case FETCH_CONTACT:
       return { ...state, item: action.payload };
     case POST_CONTACT:
-      return { ...state, item: action.payload };
+      return { ...state, items: [...state.items, action.payload] };
     case DELETE_CONTACT:
-      return { ...state, item: action.payload };
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.payload)
+      };
     case UPDATE_CONTACT:
       return { ...state, item: action.payload };
     default:
