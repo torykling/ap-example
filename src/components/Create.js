@@ -63,7 +63,7 @@ export class Create extends Component {
             />
           </div>
           <br />
-          <input type="submit" value="Submit" />
+          <input className="greenButton" type="submit" value="Submit" />
         </form>
       </div>
     );

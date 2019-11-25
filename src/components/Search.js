@@ -18,10 +18,7 @@ export class Search extends Component {
   }
   onSubmit(e) {
     e.preventDefault();
-    const data = {
-      id: this.state.id
-    };
-    this.props.fetchContact(data);
+    this.props.fetchContact(this.state.id);
   }
   render() {
     return (
@@ -29,7 +26,7 @@ export class Search extends Component {
         <h1>Search for a contact</h1>
         <form onSubmit={this.onSubmit}>
           <div>
-            <label>Id:</label>
+            <label>Search By Id:</label>
             <input
               onChange={this.onChange}
               type="text"
@@ -38,8 +35,7 @@ export class Search extends Component {
             />
           </div>
           <br />
-
-          <input type="submit" value="Submit" />
+          <input className="greenButton" type="submit" value="Submit" />
         </form>
 
         <div>
