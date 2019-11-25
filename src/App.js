@@ -16,8 +16,10 @@ function App() {
           Search
         </Link>
       </nav>
-      <Route path="/" exact render={routerProps => <List />} />
-      <Route path="/search" exact render={routerProps => <Search />} />
+      <main>
+        <Route path="/" exact render={routerProps => <List />} />
+        <Route path="/search" exact render={routerProps => <Search />} />
+      </main>
     </div>
   );
 }

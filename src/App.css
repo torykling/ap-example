@@ -1,12 +1,23 @@
 .App {
   margin: 0;
   font-family: sans-serif;
+  padding: 0;
+  width: 100%;
 }
 nav {
   background-color: rgb(27, 41, 59);
   color: white;
   height: 4rem;
   margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+main {
+  position: relative;
+  top: 4rem;
+  margin: 1rem;
 }
 
 .link {
@@ -31,4 +42,10 @@ nav {
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
+}
+
+.contactCard {
+  border: 1.5px solid rgb(84, 105, 127);
+  border-radius: 5px;
+  margin: 1px;
 }

@@ -13,12 +13,14 @@ export class List extends Component {
   render() {
     const contacts = this.props.contacts.map(contact => (
       <div style={contactStyle}>
-        <ul key={contact.id}>
-          <li>{contact.name}</li>
-          <li>{contact.email}</li>
-          <li>{contact.phone}</li>
-          <li>{contact.id}</li>
-        </ul>
+        <div className="contactCard">
+          <ul key={contact.id}>
+            <li>{contact.name}</li>
+            <li>{contact.email}</li>
+            <li>{contact.phone}</li>
+            <li>{contact.id}</li>
+          </ul>
+        </div>
         <div>
           <Update contact={contact} />
           <Delete id={contact.id} />
@@ -44,5 +46,6 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, { fetchContacts })(List);
 
 const contactStyle = {
-  display: "flex"
+  display: "flex",
+  justifyContent: "space-evenly"
 };
