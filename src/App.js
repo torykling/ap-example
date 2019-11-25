@@ -17,7 +17,9 @@ function App() {
           Search
         </Link>
       </nav>
-      <Create />
+      <div className="createBar">
+        <Create />
+      </div>
       <main>
         <Route path="/" exact render={routerProps => <List />} />
         <Route path="/search" exact render={routerProps => <Search />} />
