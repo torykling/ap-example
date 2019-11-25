@@ -17,9 +17,9 @@ export const fetchContacts = () => dispatch => {
   );
 };
 // payload here is being saved to state.items
-export const fetchContact = data => dispatch => {
+export const fetchContact = id => dispatch => {
   console.log("fetching");
-  axios.get(`http://localhost:3001/contacts/${data.id}`).then(res =>
+  axios.get(`http://localhost:3001/contacts/${id}`).then(res =>
     dispatch({
       type: FETCH_CONTACT,
       payload: res.data

@@ -63,7 +63,7 @@ export class Update extends Component {
             />
           </div>
           <br />
-          <input type="submit" value="Update" />
+          <input className="greenButton" type="submit" value="Update" />
         </form>
       </div>
     );
