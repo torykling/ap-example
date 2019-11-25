@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchContacts } from "../actions/index.js";
-import Delete from "./Delete";
+
 import Update from "./Update";
 
 export class List extends Component {
@@ -34,7 +34,6 @@ export class List extends Component {
         </div>
         <div>
           <Update contact={contact} />
-          <Delete id={contact.id} />
         </div>
       </div>
     ));

@@ -7,7 +7,6 @@ export class Create extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "",
       name: "",
       email: "",
       phone: ""

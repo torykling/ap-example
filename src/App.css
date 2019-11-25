@@ -97,3 +97,7 @@ li {
 h4 {
   margin: 0;
 }
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+}

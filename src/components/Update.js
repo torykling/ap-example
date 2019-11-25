@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { updateContact } from "../actions";
+import Delete from "./Delete";
 
 export class Update extends Component {
   constructor(props) {
@@ -63,7 +64,10 @@ export class Update extends Component {
             />
           </div>
           <br />
-          <input className="greenButton" type="submit" value="Update" />
+          <div className="buttonContainer">
+            <Delete id={this.props.contact.id} />
+            <input className="greenButton" type="submit" value="Update" />
+          </div>
         </form>
       </div>
     );
