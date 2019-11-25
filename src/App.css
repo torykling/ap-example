@@ -55,7 +55,7 @@ main {
   background-color: rgb(0, 131, 117);
 }
 .greyButton:hover {
-  background-color: rgb(46, 105, 127);
+  background-color: rgb(172, 40, 7);
 }
 
 .contactCard {
@@ -90,5 +90,10 @@ li {
   margin: 0;
 }
 .update input {
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 1px;
+}
+h4 {
   margin: 0;
 }
