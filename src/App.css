@@ -4,6 +4,12 @@
   padding: 0;
   width: 100%;
 }
+input,
+button {
+  border-radius: 4px;
+  height: 2rem;
+  width: 8rem;
+}
 /* HOME PAGE */
 nav {
   background-color: rgb(27, 41, 59);
@@ -56,6 +62,12 @@ nav {
   top: 4rem;
   margin: 1rem;
 }
+.contactContainer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 15rem;
+  align-items: center;
+}
 .allContacts {
   margin: 10px auto;
   width: 80%;
@@ -82,7 +94,6 @@ li {
 .update input {
   margin: 0;
   padding: 5px 10px;
-  border-radius: 1px;
 }
 .update h4,
 .previewContact h4 {
@@ -92,7 +103,8 @@ li {
 }
 .updateForm {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 22rem;
 }
 .buttonContainer {
   display: flex;
@@ -107,14 +119,12 @@ label {
 .greenButton,
 .buttonContainer .greenButton {
   background-color: rgb(62, 131, 117);
-  border-radius: 5px;
   padding: 5px 10px;
   color: white;
 }
 .greyButton,
 .buttonContainer .greyButton {
   background-color: rgb(84, 105, 127);
-  border-radius: 5px;
   padding: 5px 10px;
   color: white;
 }
