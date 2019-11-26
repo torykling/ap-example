@@ -15,7 +15,6 @@ export class Update extends Component {
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.update = this.update.bind(this);
   }
   componentDidMount() {}
   onChange(e) {
@@ -33,7 +32,7 @@ export class Update extends Component {
     this.props.updateContact(data);
     this.setState({ message: "Contact has been updated!" });
   }
-  update() {}
+
   render() {
     return (
       <div className="update">
@@ -84,4 +83,5 @@ export class Update extends Component {
 Update.propTypes = {
   updateContact: PropTypes.func.isRequired
 };
+
 export default connect(null, { updateContact })(Update);

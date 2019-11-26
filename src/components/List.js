@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchContacts } from "../actions/index.js";
 import Search from "./Search";
-import Update from "./Update";
 import { Link } from "react-router-dom";
 
 export class List extends Component {
@@ -15,27 +14,24 @@ export class List extends Component {
       <li key={contact.id}>
         <div className="contactContainer">
           <div className="contactCard">
-            <ul>
-              <li>
-                <label>Name: </label>
-                {contact.name}
-              </li>
-              <li>
-                <label>Email: </label> {contact.email}
-              </li>
-              <li>
-                {" "}
-                <label>Phone: </label>
-                {contact.phone}
-              </li>
-              <li>
-                <label>Id: </label>
-                {contact.id}
-              </li>
-            </ul>
+            <p>
+              <label>Name: </label>
+              {contact.name}
+            </p>
+            <p>
+              <label>Email: </label> {contact.email}
+            </p>
+            <p>
+              {" "}
+              <label>Phone: </label>
+              {contact.phone}
+            </p>
+            <p>
+              <label>Id: </label>
+              {contact.id}
+            </p>
           </div>
           <div>
-            {/* <Update contact={contact} /> */}
             <Link className="link" to={`/update/${contact.id}`}>
               <button className="greenButton">Update Contact</button>
             </Link>
