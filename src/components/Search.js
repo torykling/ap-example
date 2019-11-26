@@ -22,9 +22,9 @@ export class Search extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Search for a contact</h1>
-        <form onSubmit={this.onSubmit}>
+      <div className="searchField">
+        <h3>Search for a contact</h3>
+        <form className="searchForm" onSubmit={this.onSubmit}>
           <div>
             <label>Search By Id:</label>
             <input
@@ -34,7 +34,6 @@ export class Search extends Component {
               value={this.state.id}
             />
           </div>
-          <br />
           <input className="greenButton" type="submit" value="Submit" />
         </form>
 

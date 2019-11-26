@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchContacts } from "../actions/index.js";
-
+import Search from "./Search";
 import Update from "./Update";
 
 export class List extends Component {
@@ -38,7 +38,10 @@ export class List extends Component {
       </div>
     ));
     return (
-      <div>
+      <div className="container">
+        <div>
+          <Search />
+        </div>
         <h1 className="allContacts">All Contacts</h1>
         {contacts}
       </div>

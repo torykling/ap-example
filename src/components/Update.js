@@ -69,8 +69,8 @@ export class Update extends Component {
             <br />
           </div>
           <div className="buttonContainer">
-            <Delete id={this.props.contact.id} />
             <input className="greenButton" type="submit" value="Update" />
+            <Delete id={this.props.contact.id} />
           </div>
         </form>
       </div>

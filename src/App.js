@@ -4,8 +4,6 @@ import List from "./components/List";
 import "./App.css";
 import Create from "./components/Create";
 
-import Search from "./components/Search";
-
 function App() {
   return (
     <div className="App">
@@ -13,16 +11,13 @@ function App() {
         <Link className="link" to="/">
           Home
         </Link>{" "}
-        <Link className="link" to="/search">
-          Search
+        <Link className="link" to="/create">
+          Add Contact
         </Link>
       </nav>
-      <div className="createBar">
-        <Create />
-      </div>
       <main>
         <Route path="/" exact render={routerProps => <List />} />
-        <Route path="/search" exact render={routerProps => <Search />} />
+        <Route path="/create" exact render={routerProps => <Create />} />
       </main>
     </div>
   );

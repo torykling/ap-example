@@ -14,16 +14,13 @@ nav {
   width: 100%;
   z-index: 1;
 }
-.createBar {
-  position: relative;
-  top: 4rem;
-}
-.createBar h2 {
+
+.create h2 {
   margin-top: 0;
   text-align: center;
   color: white;
 }
-main {
+.container {
   position: relative;
   top: 4rem;
   margin: 1rem;
@@ -91,6 +88,8 @@ li {
   background-color: rgb(62, 131, 117);
   width: 100%;
   margin: 0;
+  position: relative;
+  top: 4rem;
 }
 .update input {
   margin: 0;
@@ -104,10 +103,36 @@ h4 {
 }
 .form {
   display: flex;
+  justify-content: space-between;
 }
 .buttonContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  height: 7rem;
+}
+label {
+  font-size: 0.7rem;
+}
+
+.searchForm {
+  display: flex;
+}
+.searchField {
+  display: flex;
+}
+.searchField input,
+.searchField h3 {
+  margin: 5px;
+}
+.searchField h3 {
+  color: rgb(138, 154, 170);
+  font-weight: 200;
+}
+.previewContact {
+  position: relative;
+  top: 4rem;
+  width: 70%;
+  margin: 0 auto;
 }
