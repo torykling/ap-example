@@ -35,7 +35,7 @@ export class Update extends Component {
     return (
       <div className="update">
         <h4>Update this contact</h4>
-        <form className="form" onSubmit={this.onSubmit}>
+        <form className="updateForm" onSubmit={this.onSubmit}>
           <div>
             <div>
               <label>Name: </label>
