@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { fetchContacts } from "../actions/index.js";
 import Search from "./Search";
 import Update from "./Update";
+import { Link } from "react-router-dom";
 
 export class List extends Component {
   componentDidMount() {
@@ -11,31 +12,36 @@ export class List extends Component {
   }
   render() {
     const contacts = this.props.contacts.map(contact => (
-      <div className="contactContainer">
-        <div className="contactCard">
-          <ul key={contact.id}>
-            <li>
-              <b>Name: </b>
-              {contact.name}
-            </li>
-            <li>
-              <b>Email: </b> {contact.email}
-            </li>
-            <li>
-              {" "}
-              <b>Phone: </b>
-              {contact.phone}
-            </li>
-            <li>
-              <b>Id: </b>
-              {contact.id}
-            </li>
-          </ul>
+      <li key={contact.id}>
+        <div className="contactContainer">
+          <div className="contactCard">
+            <ul>
+              <li>
+                <label>Name: </label>
+                {contact.name}
+              </li>
+              <li>
+                <label>Email: </label> {contact.email}
+              </li>
+              <li>
+                {" "}
+                <label>Phone: </label>
+                {contact.phone}
+              </li>
+              <li>
+                <label>Id: </label>
+                {contact.id}
+              </li>
+            </ul>
+          </div>
+          <div>
+            {/* <Update contact={contact} /> */}
+            <Link className="link" to={`/update/${contact.id}`}>
+              <button className="greenButton">Update Contact</button>
+            </Link>
+          </div>
         </div>
-        <div>
-          <Update contact={contact} />
-        </div>
-      </div>
+      </li>
     ));
     return (
       <div className="container">
@@ -43,7 +49,7 @@ export class List extends Component {
           <Search />
         </div>
         <h1 className="allContacts">All Contacts</h1>
-        {contacts}
+        <ul>{contacts}</ul>
       </div>
     );
   }
