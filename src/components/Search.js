@@ -23,10 +23,9 @@ export class Search extends Component {
   render() {
     return (
       <div className="searchField">
-        <h3>Search for a contact</h3>
+        <h3>Search for a contact by id:</h3>
         <form className="searchForm" onSubmit={this.onSubmit}>
           <div>
-            <label>Search By Id:</label>
             <input
               onChange={this.onChange}
               type="text"
@@ -38,7 +37,7 @@ export class Search extends Component {
         </form>
 
         <div>
-          <ul>
+          <ul className="searchResult">
             <li>{this.props.contact.name}</li>
             <li>{this.props.contact.phone}</li>
             <li>{this.props.contact.email}</li>

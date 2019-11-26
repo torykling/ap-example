@@ -52,10 +52,10 @@ nav {
   color: white;
 }
 .greenButton:hover {
-  background-color: rgb(0, 131, 117);
+  background-color: rgb(54, 105, 94);
 }
 .greyButton:hover {
-  background-color: rgb(172, 40, 7);
+  background-color: rgb(224, 55, 13);
 }
 
 .contactCard {
@@ -121,6 +121,9 @@ label {
 }
 .searchField {
   display: flex;
+  height: 80px;
+  border-bottom: 1px dotted rgb(138, 154, 170);
+  padding-bottom: 10px;
 }
 .searchField input,
 .searchField h3 {
@@ -135,4 +138,11 @@ label {
   top: 4rem;
   width: 70%;
   margin: 0 auto;
+}
+.searchField input {
+  height: 30px;
+}
+.searchResult {
+  margin: 0 0 0 10px;
+  color: rgb(138, 154, 170);
 }

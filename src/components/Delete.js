@@ -15,9 +15,9 @@ export class Delete extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
-          <input className="greyButton" type="submit" value="Delete Contact" />
-        </form>
+        <button onClick={this.onSubmit} className="greyButton" type="submit">
+          Delete Contact
+        </button>
       </div>
     );
   }
