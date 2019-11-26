@@ -30,7 +30,7 @@ export class Create extends Component {
   render() {
     return (
       <div className="create">
-        <h1>Add a new contact</h1>
+        <h2>Add a new contact</h2>
         <form className="addForm" onSubmit={this.onSubmit}>
           <div>
             <label>Name:</label>

@@ -18,9 +18,10 @@ nav {
   position: relative;
   top: 4rem;
 }
-.createBar h1 {
+.createBar h2 {
   margin-top: 0;
   text-align: center;
+  color: white;
 }
 main {
   position: relative;
@@ -32,20 +33,22 @@ main {
   color: white;
   text-decoration: none;
   font-size: 3rem;
-  margin: 0;
+  margin: 0 10px;
 }
 
 .link:hover {
   text-decoration: underline;
 }
 
-.greenButton {
+.greenButton,
+.buttonContainer .greenButton {
   background-color: rgb(62, 131, 117);
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
 }
-.greyButton {
+.greyButton,
+.buttonContainer .greyButton {
   background-color: rgb(84, 105, 127);
   border-radius: 5px;
   padding: 5px 10px;
@@ -68,7 +71,7 @@ main {
 }
 
 .allContacts {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 80%;
   text-align: center;
 }
@@ -95,9 +98,16 @@ li {
   border-radius: 1px;
 }
 h4 {
-  margin: 0;
+  margin: 1px;
+  color: rgb(138, 154, 170);
+  font-weight: 200;
+}
+.form {
+  display: flex;
 }
 .buttonContainer {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -14,6 +14,7 @@ export class Update extends Component {
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
   onChange(e) {
     e.preventDefault();
@@ -29,41 +30,44 @@ export class Update extends Component {
     };
     this.props.updateContact(data);
   }
+  update() {}
   render() {
     return (
       <div className="update">
         <h4>Update this contact</h4>
-        <form onSubmit={this.onSubmit}>
+        <form className="form" onSubmit={this.onSubmit}>
           <div>
-            <label>Name:</label>
-            <input
-              onChange={this.onChange}
-              type="text"
-              name="name"
-              value={this.state.name}
-            />
+            <div>
+              <label>Name: </label>
+              <input
+                onChange={this.onChange}
+                type="text"
+                name="name"
+                value={this.state.name}
+              />
+            </div>
+            <br />
+            <div>
+              <label>Email: </label>
+              <input
+                onChange={this.onChange}
+                type="text"
+                name="email"
+                value={this.state.email}
+              />
+            </div>
+            <br />
+            <div>
+              <label>Phone: </label>
+              <input
+                onChange={this.onChange}
+                type="text"
+                name="phone"
+                value={this.state.phone}
+              />
+            </div>
+            <br />
           </div>
-          <br />
-          <div>
-            <label>Email:</label>
-            <input
-              onChange={this.onChange}
-              type="text"
-              name="email"
-              value={this.state.email}
-            />
-          </div>
-          <br />
-          <div>
-            <label>Phone:</label>
-            <input
-              onChange={this.onChange}
-              type="text"
-              name="phone"
-              value={this.state.phone}
-            />
-          </div>
-          <br />
           <div className="buttonContainer">
             <Delete id={this.props.contact.id} />
             <input className="greenButton" type="submit" value="Update" />
