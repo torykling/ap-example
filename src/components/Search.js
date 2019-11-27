@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchContact } from "../actions";
+import { Link } from "react-router-dom";
 
 export class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: ""
+      id: "",
+      class: "hidden"
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -19,6 +21,9 @@ export class Search extends Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.fetchContact(this.state.id);
+    if (this.props.contact) {
+      this.setState({ class: "" });
+    }
   }
   render() {
     return (
@@ -43,6 +48,12 @@ export class Search extends Component {
             <li>{this.props.contact.email}</li>
           </ul>
         </div>
+        <Link
+          className={this.state.class}
+          to={`/update/${this.props.contact.id}`}
+        >
+          <button className="greenButton">Update Contact</button>
+        </Link>
       </div>
     );
   }

@@ -143,6 +143,9 @@ label {
 .greyButton:hover {
   background-color: rgb(224, 55, 13);
 }
+.hidden {
+  display: none;
+}
 
 /* ADD CONTACT */
 .create {
