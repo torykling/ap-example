@@ -9,10 +9,11 @@ export class Search extends Component {
     super(props);
     this.state = {
       id: "",
-      class: "hidden"
+      class: "searchResult hidden"
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
   onChange(e) {
     e.preventDefault();
@@ -22,8 +23,11 @@ export class Search extends Component {
     e.preventDefault();
     this.props.fetchContact(this.state.id);
     if (this.props.contact) {
-      this.setState({ class: "" });
+      this.setState({ class: "searchResult" });
     }
+  }
+  onClick(e) {
+    this.setState({ class: "searchResult hidden" });
   }
   render() {
     return (
@@ -40,20 +44,20 @@ export class Search extends Component {
           </div>
           <input className="greenButton" type="submit" value="Submit" />
         </form>
-
-        <div>
-          <ul className="searchResult">
-            <li>{this.props.contact.name}</li>
-            <li>{this.props.contact.phone}</li>
-            <li>{this.props.contact.email}</li>
-          </ul>
+        <div className={this.state.class}>
+          <div>
+            <ul>
+              <li>{this.props.contact.name}</li>
+              <li>{this.props.contact.phone}</li>
+              <li>{this.props.contact.email}</li>
+            </ul>
+          </div>
+          <Link to={`/update/${this.props.contact.id}`}>
+            <button className="greenButton" onClick={this.onClick}>
+              Update Contact
+            </button>
+          </Link>
         </div>
-        <Link
-          className={this.state.class}
-          to={`/update/${this.props.contact.id}`}
-        >
-          <button className="greenButton">Update Contact</button>
-        </Link>
       </div>
     );
   }
