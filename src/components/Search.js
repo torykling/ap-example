@@ -22,7 +22,7 @@ export class Search extends Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.fetchContact(this.state.id);
-    if (this.props.contact) {
+    if (this.props.contact.id) {
       this.setState({ class: "searchResult" });
     }
   }
@@ -45,13 +45,12 @@ export class Search extends Component {
           <input className="greenButton" type="submit" value="Submit" />
         </form>
         <div className={this.state.class}>
-          <div>
-            <ul>
-              <li>{this.props.contact.name}</li>
-              <li>{this.props.contact.phone}</li>
-              <li>{this.props.contact.email}</li>
-            </ul>
-          </div>
+          <ul>
+            <li>{this.props.contact.name}</li>
+            <li>{this.props.contact.phone}</li>
+            <li>{this.props.contact.email}</li>
+          </ul>
+
           <Link to={`/update/${this.props.contact.id}`}>
             <button className="greenButton" onClick={this.onClick}>
               Update Contact

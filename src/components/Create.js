@@ -10,7 +10,7 @@ export class Create extends Component {
       name: "",
       email: "",
       phone: "",
-      message: ""
+      message: "Please enter all fields"
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -26,8 +26,10 @@ export class Create extends Component {
       email: this.state.email,
       phone: this.state.phone
     };
-    this.props.createContact(data);
-    this.setState({ message: "Contact added!" });
+    if (this.state.name && this.state.email && this.state.phone) {
+      this.props.createContact(data);
+      this.setState({ message: "Contact added!" });
+    }
   }
   render() {
     return (

@@ -1,22 +1,24 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { updateContact } from "../actions";
+import { updateContact, fetchContact } from "../actions";
 import Delete from "./Delete";
 
 export class Update extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      phone: "",
+      name: this.props.contact.name,
+      email: this.props.contact.email,
+      phone: this.props.contact.phone,
       message: ""
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchContact();
+  }
   onChange(e) {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
@@ -83,5 +85,9 @@ export class Update extends Component {
 Update.propTypes = {
   updateContact: PropTypes.func.isRequired
 };
-
-export default connect(null, { updateContact })(Update);
+const mapStateToProps = state => ({
+  contact: state.contacts.item
+});
+export default connect(mapStateToProps, { updateContact, fetchContact })(
+  Update
+);

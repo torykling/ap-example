@@ -10,7 +10,7 @@ button {
   height: 2rem;
   width: 8rem;
 }
-/* HOME PAGE */
+/* ***************************************** HOME PAGE  ******************************************** */
 nav {
   background-color: rgb(27, 41, 59);
   color: white;
@@ -30,7 +30,7 @@ nav {
 .link:hover {
   text-decoration: underline;
 }
-/* SEARCH */
+/* ***************************************** SEARCH ******************************************** */
 .searchForm {
   display: flex;
 }
@@ -61,9 +61,13 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.searchResult ul {
+  margin: 0.5rem;
 }
 
-/* LIST */
+/* ***************************************** LIST  ******************************************** */
 .container {
   position: relative;
   top: 4rem;
@@ -98,7 +102,7 @@ ul {
   font-weight: 700;
 }
 
-/* UPDATE */
+/* ***************************************** UPDATE  ******************************************** */
 .update {
   position: relative;
   top: 6rem;
@@ -154,7 +158,7 @@ label {
   display: none;
 }
 
-/* ADD CONTACT */
+/* ***************************************** ADD CONTACT  ******************************************** */
 .create {
   background-color: rgb(62, 131, 117);
   width: 100%;
