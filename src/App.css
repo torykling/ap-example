@@ -1,3 +1,4 @@
+/* ***************************************** HOME PAGE  ******************************************** */
 .App {
   margin: 0;
   font-family: sans-serif;
@@ -10,7 +11,6 @@ button {
   height: 2rem;
   width: 8rem;
 }
-/* ***************************************** HOME PAGE  ******************************************** */
 nav {
   background-color: rgb(27, 41, 59);
   color: white;
@@ -33,9 +33,15 @@ nav {
 /* ***************************************** SEARCH ******************************************** */
 .searchForm {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 17rem;
 }
 .searchField {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 8rem;
   border-bottom: 1px dotted rgb(138, 154, 170);
   padding-bottom: 10px;
@@ -158,7 +164,7 @@ label {
   display: none;
 }
 
-/* ***************************************** ADD CONTACT  ******************************************** */
+/* ***************************************** CREATE  ******************************************** */
 .create {
   background-color: rgb(62, 131, 117);
   width: 100%;
@@ -196,6 +202,10 @@ label {
     flex-direction: column;
   }
   .textbox {
-    width: 95%;
+    width: 90%;
+  }
+  .searchField {
+    height: 16rem;
+    flex-direction: column;
   }
 }

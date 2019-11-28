@@ -32,9 +32,9 @@ export class Search extends Component {
   render() {
     return (
       <div className="searchField">
-        <h3>Search for a contact by id:</h3>
-        <form className="searchForm" onSubmit={this.onSubmit}>
-          <div>
+        <div>
+          <h3>Search for a contact by id:</h3>
+          <form className="searchForm" onSubmit={this.onSubmit}>
             <input
               className="textbox"
               onChange={this.onChange}
@@ -42,9 +42,10 @@ export class Search extends Component {
               name="id"
               value={this.state.id}
             />
-          </div>
-          <input className="greenButton" type="submit" value="Submit" />
-        </form>
+
+            <input className="greenButton" type="submit" value="Submit" />
+          </form>
+        </div>
         <div className={this.state.class}>
           <ul>
             <li>{this.props.contact.name}</li>
