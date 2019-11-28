@@ -127,6 +127,9 @@ ul {
   color: rgb(138, 154, 170);
   font-weight: 200;
 }
+.update h4 {
+  margin-bottom: 1rem;
+}
 .updateForm {
   display: flex;
   justify-content: space-between;
