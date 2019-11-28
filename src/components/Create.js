@@ -40,6 +40,7 @@ export class Create extends Component {
             <div>
               <label>Name:</label>
               <input
+                className="textbox"
                 onChange={this.onChange}
                 type="text"
                 name="name"
@@ -50,6 +51,7 @@ export class Create extends Component {
             <div>
               <label>Email:</label>
               <input
+                className="textbox"
                 onChange={this.onChange}
                 type="text"
                 name="email"
@@ -60,6 +62,7 @@ export class Create extends Component {
             <div>
               <label>Phone:</label>
               <input
+                className="textbox"
                 onChange={this.onChange}
                 type="text"
                 name="phone"

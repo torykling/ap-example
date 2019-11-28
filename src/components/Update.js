@@ -8,9 +8,9 @@ export class Update extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: this.props.contact.name,
-      email: this.props.contact.email,
-      phone: this.props.contact.phone,
+      name: "",
+      email: "",
+      phone: "",
       message: ""
     };
     this.onChange = this.onChange.bind(this);
@@ -44,6 +44,7 @@ export class Update extends Component {
             <div>
               <label>Name: </label>
               <input
+                className="textbox"
                 onChange={this.onChange}
                 type="text"
                 name="name"
@@ -54,6 +55,7 @@ export class Update extends Component {
             <div>
               <label>Email: </label>
               <input
+                className="textbox"
                 onChange={this.onChange}
                 type="text"
                 name="email"
@@ -64,6 +66,7 @@ export class Update extends Component {
             <div>
               <label>Phone: </label>
               <input
+                className="textbox"
                 onChange={this.onChange}
                 type="text"
                 name="phone"

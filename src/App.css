@@ -183,3 +183,19 @@ label {
   width: 70%;
   margin: 0 auto;
 }
+/* ************************************************ MEDIA QUERIES ****************************************************** */
+
+@media screen and (max-width: 600px) {
+  .link {
+    font-size: 2rem;
+  }
+  .contactContainer,
+  .addForm,
+  .updateForm,
+  .searchForm {
+    flex-direction: column;
+  }
+  .textbox {
+    width: 95%;
+  }
+}

@@ -36,6 +36,7 @@ export class Search extends Component {
         <form className="searchForm" onSubmit={this.onSubmit}>
           <div>
             <input
+              className="textbox"
               onChange={this.onChange}
               type="text"
               name="id"
