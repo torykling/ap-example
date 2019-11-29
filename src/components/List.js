@@ -1,3 +1,6 @@
+// This is the list component. It invokes the fetchContacts action creator to fetch all of the contacts from the server
+// and then maps through the new state to render information about each contact on the home page.
+// The list component also holds our search component nested inside it.
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -54,6 +57,7 @@ List.propTypes = {
   fetchContacts: PropTypes.func.isRequired,
   contacts: PropTypes.array.isRequired
 };
+// mapStateToProps allows us to use the new state from the store as a prop in this component.
 const mapStateToProps = state => ({
   contacts: state.contacts.items
 });

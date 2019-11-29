@@ -1,3 +1,5 @@
+// This is the delete button component. It invokes the deleteContact action creator when the user
+// presses delete and then redirects the user back to the homepage.
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";

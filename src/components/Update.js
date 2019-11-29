@@ -1,3 +1,4 @@
+// This is the update component. It invokes the updateContact action creator when the user submits.
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -16,13 +17,14 @@ export class Update extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  componentDidMount() {
-    this.props.fetchContact();
-  }
+  // This method handles the changes the user makes to the input fields.
   onChange(e) {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
   }
+  // This method updates the contact with the new data saved to state and changes the
+  // message the user sees.
+
   onSubmit(e) {
     e.preventDefault();
     const data = {
@@ -48,7 +50,6 @@ export class Update extends Component {
                 onChange={this.onChange}
                 type="text"
                 name="name"
-                value={this.state.name}
               />
             </div>
             <br />
@@ -59,7 +60,6 @@ export class Update extends Component {
                 onChange={this.onChange}
                 type="text"
                 name="email"
-                value={this.state.email}
               />
             </div>
             <br />
@@ -70,16 +70,17 @@ export class Update extends Component {
                 onChange={this.onChange}
                 type="text"
                 name="phone"
-                value={this.state.phone}
               />
             </div>
             <br />
           </div>
+          {/* The update form contains a submit button and a delete button. */}
           <div className="buttonContainer">
             <input className="greenButton" type="submit" value="Update" />
             <Delete id={this.props.match.params.id} />
           </div>
         </form>
+        {/* The message the user sees when the contact has been updated */}
         <h4>{this.state.message}</h4>
       </div>
     );

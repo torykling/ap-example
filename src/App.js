@@ -1,7 +1,11 @@
+// Here react router handles our routes to the home page, which will return the list of contacts, the create page,
+// where the user will be able to add a contact, and the update page, where the user will be able to
+// update a contact.
+
 import React from "react";
+import "./App.css";
 import { Link, Route } from "react-router-dom";
 import List from "./components/List";
-import "./App.css";
 import Create from "./components/Create";
 import Update from "./components/Update";
 

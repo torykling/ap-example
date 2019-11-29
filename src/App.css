@@ -1,3 +1,6 @@
+/* In a larger application, I'd likely have separate css files for each component and store both the component js and css files
+in separate folders. For an application of this size, I find it easier to keep all the styles in one place. */
+
 /* ***************************************** HOME PAGE  ******************************************** */
 .App {
   margin: 0;

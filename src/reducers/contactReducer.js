@@ -1,3 +1,6 @@
+// Here we define the contactReducer. It's a pure function that takes the previous state and
+// an action and returns the updated state. Here we define how the state should be updated
+// depending on the type of the action.
 import {
   FETCH_CONTACTS,
   FETCH_CONTACT,
