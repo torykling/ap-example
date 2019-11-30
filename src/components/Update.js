@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { updateContact, fetchContact } from "../actions";
+import { updateContact } from "../actions";
 import Delete from "./Delete";
 
 export class Update extends Component {
@@ -17,10 +17,12 @@ export class Update extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   // This method handles the changes the user makes to the input fields.
   onChange(e) {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
+    console.log(this.props.contact);
   }
   // This method updates the contact with the new data saved to state and changes the
   // message the user sees.
@@ -41,6 +43,7 @@ export class Update extends Component {
     return (
       <div className="update">
         <h4>Update this contact</h4>
+        <h4>Id Number: {this.props.match.params.id}</h4>
         <form className="updateForm" onSubmit={this.onSubmit}>
           <div>
             <div>
@@ -89,9 +92,5 @@ export class Update extends Component {
 Update.propTypes = {
   updateContact: PropTypes.func.isRequired
 };
-const mapStateToProps = state => ({
-  contact: state.contacts.item
-});
-export default connect(mapStateToProps, { updateContact, fetchContact })(
-  Update
-);
+
+export default connect(null, { updateContact })(Update);

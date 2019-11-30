@@ -1,6 +1,6 @@
 ### Arcadia Power Contacts
 
-This is a small CRUD application that uses a Node-Express server in the server directory of Arcadia-FE-HW-2019.
+This is a small CRUD application that uses a Node-Express server in the server directory of Arcadia-FE-HW-2019 to manage a contact list.
 
 ![Contacts Application](./ap-contacts.png)
 

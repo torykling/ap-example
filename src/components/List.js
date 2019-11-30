@@ -12,6 +12,7 @@ export class List extends Component {
   componentDidMount() {
     this.props.fetchContacts();
   }
+
   render() {
     const contacts = this.props.contacts.map(contact => (
       <li key={contact.id}>
