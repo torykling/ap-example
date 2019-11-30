@@ -20,7 +20,7 @@ export class Search extends Component {
   }
   onChange(e) {
     e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value.trim() });
   }
   // When the user hits submit, the contact is fetched and the hidden class is
   //  removed from the div displaying that contact's information.
