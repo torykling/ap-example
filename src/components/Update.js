@@ -22,7 +22,6 @@ export class Update extends Component {
   onChange(e) {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.props.contact);
   }
   // This method updates the contact with the new data saved to state and changes the
   // message the user sees.
