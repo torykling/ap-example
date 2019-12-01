@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { fetchContact } from "../actions";
 import { Link } from "react-router-dom";
 
-export class Search extends Component {
+class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {

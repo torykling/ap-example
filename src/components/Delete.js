@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { deleteContact } from "../actions";
 import { Redirect } from "react-router-dom";
 
-export class Delete extends Component {
+class Delete extends Component {
   constructor(props) {
     super(props);
     this.state = {

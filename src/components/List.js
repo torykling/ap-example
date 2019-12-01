@@ -8,7 +8,7 @@ import { fetchContacts } from "../actions/index.js";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 
-export class List extends Component {
+class List extends Component {
   componentDidMount() {
     this.props.fetchContacts();
   }

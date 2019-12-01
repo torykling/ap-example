@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { updateContact } from "../actions";
 import Delete from "./Delete";
 
-export class Update extends Component {
+class Update extends Component {
   constructor(props) {
     super(props);
     this.state = {

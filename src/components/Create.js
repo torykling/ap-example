@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createContact } from "../actions";
 
-export class Create extends Component {
+class Create extends Component {
   constructor(props) {
     super(props);
     // Here in the component-level state we can collect the information the user
